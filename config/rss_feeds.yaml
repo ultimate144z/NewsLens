@@ -1,0 +1,49 @@
+# RSS Feed URLs Configuration
+# List of news sources with their RSS feed URLs
+
+news_sources:
+  bbc:
+    name: "BBC News"
+    url: "http://feeds.bbci.co.uk/news/rss.xml"
+    category: "general"
+    
+  cnn:
+    name: "CNN Top Stories"
+    url: "http://rss.cnn.com/rss/cnn_topstories.rss"
+    category: "general"
+    
+  aljazeera:
+    name: "Al Jazeera English"
+    url: "https://www.aljazeera.com/xml/rss/all.xml"
+    category: "international"
+    
+  reuters:
+    name: "Reuters World News"
+    url: "https://www.reutersagency.com/feed/?taxonomy=best-topics&post_type=best"
+    category: "general"
+    
+  fox_news:
+    name: "Fox News"
+    url: "http://feeds.foxnews.com/foxnews/latest"
+    category: "general"
+    
+  guardian:
+    name: "The Guardian"
+    url: "https://www.theguardian.com/world/rss"
+    category: "general"
+    
+  nyt:
+    name: "New York Times"
+    url: "https://rss.nytimes.com/services/xml/rss/nyt/HomePage.xml"
+    category: "general"
+    
+  washington_post:
+    name: "Washington Post"
+    url: "http://feeds.washingtonpost.com/rss/world"
+    category: "general"
+
+# Scraping settings
+scraping:
+  timeout: 30  # seconds
+  retry_attempts: 3
+  user_agent: "NewsLens/1.0"

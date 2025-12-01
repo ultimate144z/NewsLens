@@ -1,0 +1,5 @@
+source,total_articles,positive,neutral,negative,positive_pct,neutral_pct,negative_pct,avg_confidence
+BBC News,31,1,14,16,3.2%,45.2%,51.6%,73.40%
+CNN Top Stories,69,21,30,18,30.4%,43.5%,26.1%,73.61%
+Test News Network,1,1,0,0,100.0%,0.0%,0.0%,92.00%
+The Guardian,45,0,25,20,0.0%,55.6%,44.4%,70.46%

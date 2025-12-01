@@ -1,0 +1,101 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data Files (Don't commit raw data or databases)
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+data/raw/*.json
+data/raw/*.csv
+data/processed/*.json
+data/processed/*.csv
+*.db
+*.sqlite
+
+# Logs
+logs/
+*.log
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+config/secrets.yaml
+*_secrets.yaml
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+notebook/.ipynb_checkpoints/
+
+# Model Files (Large files)
+models/
+*.pt
+*.pth
+*.bin
+*.onnx
+
+# Temporary Files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# OS Files
+Thumbs.db
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Backup Files
+*.bak
+*.backup
+*~
+
+# Project Specific
+fix_indent.py

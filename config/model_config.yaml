@@ -1,0 +1,52 @@
+# NLP Model Configuration
+
+# Sentiment Analysis Model
+sentiment_model:
+  name: "cardiffnlp/twitter-roberta-base-sentiment-latest"
+  # Alternative models:
+  # - "finiteautomata/bertweet-base-sentiment-analysis"
+  # - "nlptown/bert-base-multilingual-uncased-sentiment"
+  device: "cpu"  # Options: cpu, cuda
+  batch_size: 16
+  max_length: 512
+  
+# spaCy Configuration for NER and Keyword Extraction
+spacy_model:
+  name: "en_core_web_sm"
+  # To download: python -m spacy download en_core_web_sm
+  # Larger models: en_core_web_md, en_core_web_lg
+  
+# Text Preprocessing
+preprocessing:
+  lowercase: true
+  remove_urls: true
+  remove_emails: true
+  remove_mentions: true
+  remove_hashtags: false  # Keep hashtags for analysis
+  remove_numbers: false
+  remove_punctuation: false
+  remove_stopwords: true
+  lemmatize: true
+  min_word_length: 2
+  
+# Keyword Extraction
+keyword_extraction:
+  method: "tfidf"  # Options: tfidf, textrank, rake
+  top_n_keywords: 10
+  ngram_range: [1, 2]  # Unigrams and bigrams
+  
+# Entity Recognition
+entity_recognition:
+  entity_types:
+    - PERSON
+    - ORG
+    - GPE  # Countries, cities, states
+    - LOC  # Non-GPE locations
+    - EVENT
+  min_confidence: 0.5
+  
+# Sentiment Thresholds
+sentiment_thresholds:
+  positive: 0.6
+  neutral: 0.4
+  # Anything below neutral threshold is negative

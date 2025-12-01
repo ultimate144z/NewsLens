@@ -1,0 +1,1439 @@
+[
+  {
+    "title": "Chris Mason: Why, in my judgement, Reeves was misleading on one specific point",
+    "description": "The Chancellor chose not to share some information on tax receipts in an unusual press conference, given before the Budget.",
+    "link": "https://www.bbc.com/news/articles/cewjkv8jylko?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 11:03:33 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542306",
+    "scraper_type": "rss",
+    "title_clean": "chris mason judgement reef misleading one specific point",
+    "title_tokens": [
+      "chris",
+      "mason",
+      "judgement",
+      "reef",
+      "misleading",
+      "one",
+      "specific",
+      "point"
+    ],
+    "description_clean": "chancellor chose share information tax receipt unusual press conference given budget",
+    "description_tokens": [
+      "chancellor",
+      "chose",
+      "share",
+      "information",
+      "tax",
+      "receipt",
+      "unusual",
+      "press",
+      "conference",
+      "given",
+      "budget"
+    ],
+    "full_text_clean": "chris mason judgement reef misleading one specific point chancellor chose share information tax receipt unusual press conference given budget",
+    "full_text_tokens": [
+      "chris",
+      "mason",
+      "judgement",
+      "reef",
+      "misleading",
+      "one",
+      "specific",
+      "point",
+      "chancellor",
+      "chose",
+      "share",
+      "information",
+      "tax",
+      "receipt",
+      "unusual",
+      "press",
+      "conference",
+      "given",
+      "budget"
+    ],
+    "title_token_count": 8,
+    "description_token_count": 11,
+    "full_text_token_count": 19,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.6257795691490173,
+    "sentiment_scores": {
+      "negative": 0.6257795691490173,
+      "neutral": 0.36643359065055847,
+      "positive": 0.007786841597408056
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:45.913777",
+    "entities": {
+      "organizations": [
+        {
+          "text": "Reeves",
+          "label": "ORG",
+          "start": 35,
+          "end": 41
+        },
+        {
+          "text": "Budget",
+          "label": "ORG",
+          "start": 195,
+          "end": 201
+        }
+      ],
+      "locations": [],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": [
+        {
+          "text": "Chris Mason",
+          "label": "PERSON",
+          "start": 0,
+          "end": 11
+        }
+      ]
+    },
+    "entity_counts": {
+      "organizations": 2,
+      "locations": 0,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 1
+    },
+    "keywords": [
+      {
+        "text": "reeves",
+        "count": 2
+      },
+      {
+        "text": "my judgement",
+        "count": 1
+      },
+      {
+        "text": "one specific point",
+        "count": 1
+      },
+      {
+        "text": "the chancellor",
+        "count": 1
+      },
+      {
+        "text": "some information",
+        "count": 1
+      },
+      {
+        "text": "tax receipts",
+        "count": 1
+      },
+      {
+        "text": "an unusual press conference",
+        "count": 1
+      },
+      {
+        "text": "the budget",
+        "count": 1
+      },
+      {
+        "text": "chris",
+        "count": 1
+      },
+      {
+        "text": "mason",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.602136"
+  },
+  {
+    "title": "Heads of UK Special Forces suppressed evidence of war crimes, officer tells inquiry",
+    "description": "An officer tells the Independent Inquiry relating to Afghanistan UK Special Forces leadership was \"very much suppressing\" the allegations.",
+    "link": "https://www.bbc.com/news/articles/cvgk1l4lrrdo?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 11:41:28 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542317",
+    "scraper_type": "rss",
+    "title_clean": "head uk special force suppressed evidence war crime officer tell inquiry",
+    "title_tokens": [
+      "head",
+      "uk",
+      "special",
+      "force",
+      "suppressed",
+      "evidence",
+      "war",
+      "crime",
+      "officer",
+      "tell",
+      "inquiry"
+    ],
+    "description_clean": "officer tell independent inquiry relating afghanistan uk special force leadership `` much suppressing '' allegation",
+    "description_tokens": [
+      "officer",
+      "tell",
+      "independent",
+      "inquiry",
+      "relating",
+      "afghanistan",
+      "uk",
+      "special",
+      "force",
+      "leadership",
+      "``",
+      "much",
+      "suppressing",
+      "''",
+      "allegation"
+    ],
+    "full_text_clean": "head uk special force suppressed evidence war crime officer tell inquiry officer tell independent inquiry relating afghanistan uk special force leadership `` much suppressing '' allegation",
+    "full_text_tokens": [
+      "head",
+      "uk",
+      "special",
+      "force",
+      "suppressed",
+      "evidence",
+      "war",
+      "crime",
+      "officer",
+      "tell",
+      "inquiry",
+      "officer",
+      "tell",
+      "independent",
+      "inquiry",
+      "relating",
+      "afghanistan",
+      "uk",
+      "special",
+      "force",
+      "leadership",
+      "``",
+      "much",
+      "suppressing",
+      "''",
+      "allegation"
+    ],
+    "title_token_count": 11,
+    "description_token_count": 15,
+    "full_text_token_count": 26,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.7228705883026123,
+    "sentiment_scores": {
+      "negative": 0.7228705883026123,
+      "neutral": 0.2708517611026764,
+      "positive": 0.006277737207710743
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:45.985913",
+    "entities": {
+      "organizations": [
+        {
+          "text": "Special Forces",
+          "label": "ORG",
+          "start": 12,
+          "end": 26
+        },
+        {
+          "text": "the Independent Inquiry",
+          "label": "ORG",
+          "start": 101,
+          "end": 124
+        }
+      ],
+      "locations": [
+        {
+          "text": "Afghanistan",
+          "label": "GPE",
+          "start": 137,
+          "end": 148
+        },
+        {
+          "text": "UK",
+          "label": "GPE",
+          "start": 149,
+          "end": 151
+        }
+      ],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 2,
+      "locations": 2,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "officer",
+        "count": 3
+      },
+      {
+        "text": "inquiry",
+        "count": 3
+      },
+      {
+        "text": "heads",
+        "count": 2
+      },
+      {
+        "text": "evidence",
+        "count": 2
+      },
+      {
+        "text": "special",
+        "count": 2
+      },
+      {
+        "text": "forces",
+        "count": 2
+      },
+      {
+        "text": "uk special forces",
+        "count": 1
+      },
+      {
+        "text": "war crimes",
+        "count": 1
+      },
+      {
+        "text": "an officer",
+        "count": 1
+      },
+      {
+        "text": "the independent inquiry",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.637706"
+  },
+  {
+    "title": "Tulip Siddiq MP given jail sentence in Bangladesh after trial in her absence",
+    "description": "The former minister and niece of Bangladesh's ousted former leader, who received a two-year sentence, says the charges are politically motivated.",
+    "link": "https://www.bbc.com/news/articles/c4g9dyd84lwo?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 11:33:21 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542323",
+    "scraper_type": "rss",
+    "title_clean": "tulip siddiq mp given jail sentence bangladesh trial absence",
+    "title_tokens": [
+      "tulip",
+      "siddiq",
+      "mp",
+      "given",
+      "jail",
+      "sentence",
+      "bangladesh",
+      "trial",
+      "absence"
+    ],
+    "description_clean": "former minister niece bangladesh 's ousted former leader received two-year sentence say charge politically motivated",
+    "description_tokens": [
+      "former",
+      "minister",
+      "niece",
+      "bangladesh",
+      "'s",
+      "ousted",
+      "former",
+      "leader",
+      "received",
+      "two-year",
+      "sentence",
+      "say",
+      "charge",
+      "politically",
+      "motivated"
+    ],
+    "full_text_clean": "tulip siddiq mp given jail sentence bangladesh trial absence former minister niece bangladesh 's ousted former leader received two-year sentence say charge politically motivated",
+    "full_text_tokens": [
+      "tulip",
+      "siddiq",
+      "mp",
+      "given",
+      "jail",
+      "sentence",
+      "bangladesh",
+      "trial",
+      "absence",
+      "former",
+      "minister",
+      "niece",
+      "bangladesh",
+      "'s",
+      "ousted",
+      "former",
+      "leader",
+      "received",
+      "two-year",
+      "sentence",
+      "say",
+      "charge",
+      "politically",
+      "motivated"
+    ],
+    "title_token_count": 9,
+    "description_token_count": 15,
+    "full_text_token_count": 24,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.7154531478881836,
+    "sentiment_scores": {
+      "negative": 0.7154531478881836,
+      "neutral": 0.27806776762008667,
+      "positive": 0.006479073781520128
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.063498",
+    "entities": {
+      "organizations": [],
+      "locations": [
+        {
+          "text": "Bangladesh",
+          "label": "GPE",
+          "start": 39,
+          "end": 49
+        }
+      ],
+      "money": [],
+      "dates": [
+        {
+          "text": "two-year",
+          "label": "DATE",
+          "start": 160,
+          "end": 168
+        }
+      ],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 1,
+      "money": 0,
+      "dates": 1,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "bangladesh",
+        "count": 3
+      },
+      {
+        "text": "trial",
+        "count": 2
+      },
+      {
+        "text": "niece",
+        "count": 2
+      },
+      {
+        "text": "sentence",
+        "count": 2
+      },
+      {
+        "text": "tulip siddiq mp",
+        "count": 1
+      },
+      {
+        "text": "jail sentence",
+        "count": 1
+      },
+      {
+        "text": "her absence",
+        "count": 1
+      },
+      {
+        "text": "the former minister",
+        "count": 1
+      },
+      {
+        "text": "bangladesh's ousted former leader",
+        "count": 1
+      },
+      {
+        "text": "a two-year sentence",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.677047"
+  },
+  {
+    "title": "David Dimbleby: Can William's 'ordinary Joe' approach win back more support for the monarchy?",
+    "description": "Polls suggest public approval for the monarchy has declined, which raises the question of what King Charles and Prince William could do to win back more support for the institution.",
+    "link": "https://www.bbc.com/news/articles/cx2dn5ygypqo?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 00:52:30 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542328",
+    "scraper_type": "rss",
+    "title_clean": "david dimbleby william 's 'ordinary joe approach win back support monarchy",
+    "title_tokens": [
+      "david",
+      "dimbleby",
+      "william",
+      "'s",
+      "'ordinary",
+      "joe",
+      "approach",
+      "win",
+      "back",
+      "support",
+      "monarchy"
+    ],
+    "description_clean": "poll suggest public approval monarchy declined raise question king charles prince william could win back support institution",
+    "description_tokens": [
+      "poll",
+      "suggest",
+      "public",
+      "approval",
+      "monarchy",
+      "declined",
+      "raise",
+      "question",
+      "king",
+      "charles",
+      "prince",
+      "william",
+      "could",
+      "win",
+      "back",
+      "support",
+      "institution"
+    ],
+    "full_text_clean": "david dimbleby william 's 'ordinary joe approach win back support monarchy poll suggest public approval monarchy declined raise question king charles prince william could win back support institution",
+    "full_text_tokens": [
+      "david",
+      "dimbleby",
+      "william",
+      "'s",
+      "'ordinary",
+      "joe",
+      "approach",
+      "win",
+      "back",
+      "support",
+      "monarchy",
+      "poll",
+      "suggest",
+      "public",
+      "approval",
+      "monarchy",
+      "declined",
+      "raise",
+      "question",
+      "king",
+      "charles",
+      "prince",
+      "william",
+      "could",
+      "win",
+      "back",
+      "support",
+      "institution"
+    ],
+    "title_token_count": 11,
+    "description_token_count": 17,
+    "full_text_token_count": 28,
+    "sentiment": "neutral",
+    "sentiment_confidence": 0.8886944055557251,
+    "sentiment_scores": {
+      "negative": 0.07152378559112549,
+      "neutral": 0.8886944055557251,
+      "positive": 0.03978174924850464
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.150244",
+    "entities": {
+      "organizations": [],
+      "locations": [],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": [
+        {
+          "text": "David Dimbleby",
+          "label": "PERSON",
+          "start": 0,
+          "end": 14
+        },
+        {
+          "text": "William",
+          "label": "PERSON",
+          "start": 20,
+          "end": 27
+        },
+        {
+          "text": "Joe",
+          "label": "PERSON",
+          "start": 40,
+          "end": 43
+        },
+        {
+          "text": "King Charles",
+          "label": "PERSON",
+          "start": 189,
+          "end": 201
+        },
+        {
+          "text": "Prince William",
+          "label": "PERSON",
+          "start": 206,
+          "end": 220
+        }
+      ]
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 0,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 5
+    },
+    "keywords": [
+      {
+        "text": "more support",
+        "count": 2
+      },
+      {
+        "text": "the monarchy",
+        "count": 2
+      },
+      {
+        "text": "polls",
+        "count": 2
+      },
+      {
+        "text": "william",
+        "count": 2
+      },
+      {
+        "text": "support",
+        "count": 2
+      },
+      {
+        "text": "monarchy",
+        "count": 2
+      },
+      {
+        "text": "'ordinary joe",
+        "count": 1
+      },
+      {
+        "text": "public approval",
+        "count": 1
+      },
+      {
+        "text": "the question",
+        "count": 1
+      },
+      {
+        "text": "king charles",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.722935"
+  },
+  {
+    "title": "I have high levels of forever chemicals in my blood - what can I do about it?",
+    "description": "The chemicals would \"most likely\" impact my health, but there are ways to bring levels down, I was told.",
+    "link": "https://www.bbc.com/news/articles/ce8z8pv1e0ko?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 06:04:18 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542333",
+    "scraper_type": "rss",
+    "title_clean": "high level forever chemical blood",
+    "title_tokens": [
+      "high",
+      "level",
+      "forever",
+      "chemical",
+      "blood"
+    ],
+    "description_clean": "chemical would `` likely '' impact health way bring level told",
+    "description_tokens": [
+      "chemical",
+      "would",
+      "``",
+      "likely",
+      "''",
+      "impact",
+      "health",
+      "way",
+      "bring",
+      "level",
+      "told"
+    ],
+    "full_text_clean": "high level forever chemical blood chemical would `` likely '' impact health way bring level told",
+    "full_text_tokens": [
+      "high",
+      "level",
+      "forever",
+      "chemical",
+      "blood",
+      "chemical",
+      "would",
+      "``",
+      "likely",
+      "''",
+      "impact",
+      "health",
+      "way",
+      "bring",
+      "level",
+      "told"
+    ],
+    "title_token_count": 5,
+    "description_token_count": 11,
+    "full_text_token_count": 16,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.7080297470092773,
+    "sentiment_scores": {
+      "negative": 0.7080297470092773,
+      "neutral": 0.27873799204826355,
+      "positive": 0.013232341036200523
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.227790",
+    "entities": {
+      "organizations": [],
+      "locations": [],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 0,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "levels",
+        "count": 3
+      },
+      {
+        "text": "ways",
+        "count": 2
+      },
+      {
+        "text": "chemicals",
+        "count": 2
+      },
+      {
+        "text": "high levels",
+        "count": 1
+      },
+      {
+        "text": "forever chemicals",
+        "count": 1
+      },
+      {
+        "text": "my blood",
+        "count": 1
+      },
+      {
+        "text": "the chemicals",
+        "count": 1
+      },
+      {
+        "text": "my health",
+        "count": 1
+      },
+      {
+        "text": "blood",
+        "count": 1
+      },
+      {
+        "text": "health",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.765016"
+  },
+  {
+    "title": "Weather warnings issued as month's worth of rain could fall in 24 hours",
+    "description": "Parts of the UK could see a month's worth of rainfall in just one day.",
+    "link": "https://www.bbc.com/weather/articles/crrkdylz9rxo?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 11:02:15 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542339",
+    "scraper_type": "rss",
+    "title_clean": "weather warning issued month 's worth rain could fall 24 hour",
+    "title_tokens": [
+      "weather",
+      "warning",
+      "issued",
+      "month",
+      "'s",
+      "worth",
+      "rain",
+      "could",
+      "fall",
+      "24",
+      "hour"
+    ],
+    "description_clean": "part uk could see month 's worth rainfall one day",
+    "description_tokens": [
+      "part",
+      "uk",
+      "could",
+      "see",
+      "month",
+      "'s",
+      "worth",
+      "rainfall",
+      "one",
+      "day"
+    ],
+    "full_text_clean": "weather warning issued month 's worth rain could fall 24 hour part uk could see month 's worth rainfall one day",
+    "full_text_tokens": [
+      "weather",
+      "warning",
+      "issued",
+      "month",
+      "'s",
+      "worth",
+      "rain",
+      "could",
+      "fall",
+      "24",
+      "hour",
+      "part",
+      "uk",
+      "could",
+      "see",
+      "month",
+      "'s",
+      "worth",
+      "rainfall",
+      "one",
+      "day"
+    ],
+    "title_token_count": 11,
+    "description_token_count": 10,
+    "full_text_token_count": 21,
+    "sentiment": "neutral",
+    "sentiment_confidence": 0.7270704507827759,
+    "sentiment_scores": {
+      "negative": 0.2108355015516281,
+      "neutral": 0.7270704507827759,
+      "positive": 0.06209403648972511
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.296423",
+    "entities": {
+      "organizations": [],
+      "locations": [
+        {
+          "text": "UK",
+          "label": "GPE",
+          "start": 85,
+          "end": 87
+        }
+      ],
+      "money": [],
+      "dates": [
+        {
+          "text": "month",
+          "label": "DATE",
+          "start": 27,
+          "end": 32
+        },
+        {
+          "text": "just one day",
+          "label": "DATE",
+          "start": 129,
+          "end": 141
+        }
+      ],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 1,
+      "money": 0,
+      "dates": 2,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "rain",
+        "count": 2
+      },
+      {
+        "text": "parts",
+        "count": 2
+      },
+      {
+        "text": "rainfall",
+        "count": 2
+      },
+      {
+        "text": "month",
+        "count": 2
+      },
+      {
+        "text": "worth",
+        "count": 2
+      },
+      {
+        "text": "weather warnings",
+        "count": 1
+      },
+      {
+        "text": "month's worth",
+        "count": 1
+      },
+      {
+        "text": "24 hours",
+        "count": 1
+      },
+      {
+        "text": "the uk",
+        "count": 1
+      },
+      {
+        "text": "a month's worth",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.793676"
+  },
+  {
+    "title": "An angry confrontation and online abuse: Inside the asylum protests in a divided town",
+    "description": "A Disclosure documentary uncovers the figures behind the protests around asylum hotels which have divided communities.",
+    "link": "https://www.bbc.com/news/articles/c23evz4jen3o?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 00:38:45 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542344",
+    "scraper_type": "rss",
+    "title_clean": "angry confrontation online abuse inside asylum protest divided town",
+    "title_tokens": [
+      "angry",
+      "confrontation",
+      "online",
+      "abuse",
+      "inside",
+      "asylum",
+      "protest",
+      "divided",
+      "town"
+    ],
+    "description_clean": "disclosure documentary uncovers figure behind protest around asylum hotel divided community",
+    "description_tokens": [
+      "disclosure",
+      "documentary",
+      "uncovers",
+      "figure",
+      "behind",
+      "protest",
+      "around",
+      "asylum",
+      "hotel",
+      "divided",
+      "community"
+    ],
+    "full_text_clean": "angry confrontation online abuse inside asylum protest divided town disclosure documentary uncovers figure behind protest around asylum hotel divided community",
+    "full_text_tokens": [
+      "angry",
+      "confrontation",
+      "online",
+      "abuse",
+      "inside",
+      "asylum",
+      "protest",
+      "divided",
+      "town",
+      "disclosure",
+      "documentary",
+      "uncovers",
+      "figure",
+      "behind",
+      "protest",
+      "around",
+      "asylum",
+      "hotel",
+      "divided",
+      "community"
+    ],
+    "title_token_count": 9,
+    "description_token_count": 11,
+    "full_text_token_count": 20,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.7486640214920044,
+    "sentiment_scores": {
+      "negative": 0.7486640214920044,
+      "neutral": 0.24449971318244934,
+      "positive": 0.006836297456175089
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.366725",
+    "entities": {
+      "organizations": [],
+      "locations": [],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 0,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "communities",
+        "count": 2
+      },
+      {
+        "text": "asylum",
+        "count": 2
+      },
+      {
+        "text": "protests",
+        "count": 2
+      },
+      {
+        "text": "an angry confrontation",
+        "count": 1
+      },
+      {
+        "text": "online abuse",
+        "count": 1
+      },
+      {
+        "text": "the asylum protests",
+        "count": 1
+      },
+      {
+        "text": "a divided town",
+        "count": 1
+      },
+      {
+        "text": "a disclosure documentary",
+        "count": 1
+      },
+      {
+        "text": "the figures",
+        "count": 1
+      },
+      {
+        "text": "the protests",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.824739"
+  },
+  {
+    "title": "WW1 toxic compound sprayed on Georgian protesters, BBC evidence suggests",
+    "description": "Anti-government demonstrators are likely to have been targeted with camite, our investigation finds.",
+    "link": "https://www.bbc.com/news/articles/czrk7g50e1po?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 00:19:04 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542349",
+    "scraper_type": "rss",
+    "title_clean": "ww1 toxic compound sprayed georgian protester bbc evidence suggests",
+    "title_tokens": [
+      "ww1",
+      "toxic",
+      "compound",
+      "sprayed",
+      "georgian",
+      "protester",
+      "bbc",
+      "evidence",
+      "suggests"
+    ],
+    "description_clean": "anti-government demonstrator likely targeted camite investigation find",
+    "description_tokens": [
+      "anti-government",
+      "demonstrator",
+      "likely",
+      "targeted",
+      "camite",
+      "investigation",
+      "find"
+    ],
+    "full_text_clean": "ww1 toxic compound sprayed georgian protester bbc evidence suggests anti-government demonstrator likely targeted camite investigation find",
+    "full_text_tokens": [
+      "ww1",
+      "toxic",
+      "compound",
+      "sprayed",
+      "georgian",
+      "protester",
+      "bbc",
+      "evidence",
+      "suggests",
+      "anti-government",
+      "demonstrator",
+      "likely",
+      "targeted",
+      "camite",
+      "investigation",
+      "find"
+    ],
+    "title_token_count": 9,
+    "description_token_count": 7,
+    "full_text_token_count": 16,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.8114064335823059,
+    "sentiment_scores": {
+      "negative": 0.8114064335823059,
+      "neutral": 0.18293654918670654,
+      "positive": 0.005657009314745665
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.436302",
+    "entities": {
+      "organizations": [
+        {
+          "text": "BBC",
+          "label": "ORG",
+          "start": 51,
+          "end": 54
+        }
+      ],
+      "locations": [],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 1,
+      "locations": 0,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "camite",
+        "count": 2
+      },
+      {
+        "text": "georgian protesters",
+        "count": 1
+      },
+      {
+        "text": "bbc evidence",
+        "count": 1
+      },
+      {
+        "text": "anti-government demonstrators",
+        "count": 1
+      },
+      {
+        "text": "our investigation",
+        "count": 1
+      },
+      {
+        "text": "ww1",
+        "count": 1
+      },
+      {
+        "text": "compound",
+        "count": 1
+      },
+      {
+        "text": "protesters",
+        "count": 1
+      },
+      {
+        "text": "bbc",
+        "count": 1
+      },
+      {
+        "text": "evidence",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.851629"
+  },
+  {
+    "title": "Runaway reindeer sparks huge search operation after fleeing festive celebration",
+    "description": "The animal, named Buddy, fled a festive celebration on the coast and went on the run for hours.",
+    "link": "https://www.bbc.com/news/articles/cn5l209pn1wo?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 10:00:23 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542354",
+    "scraper_type": "rss",
+    "title_clean": "runaway reindeer spark huge search operation fleeing festive celebration",
+    "title_tokens": [
+      "runaway",
+      "reindeer",
+      "spark",
+      "huge",
+      "search",
+      "operation",
+      "fleeing",
+      "festive",
+      "celebration"
+    ],
+    "description_clean": "animal named buddy fled festive celebration coast went run hour",
+    "description_tokens": [
+      "animal",
+      "named",
+      "buddy",
+      "fled",
+      "festive",
+      "celebration",
+      "coast",
+      "went",
+      "run",
+      "hour"
+    ],
+    "full_text_clean": "runaway reindeer spark huge search operation fleeing festive celebration animal named buddy fled festive celebration coast went run hour",
+    "full_text_tokens": [
+      "runaway",
+      "reindeer",
+      "spark",
+      "huge",
+      "search",
+      "operation",
+      "fleeing",
+      "festive",
+      "celebration",
+      "animal",
+      "named",
+      "buddy",
+      "fled",
+      "festive",
+      "celebration",
+      "coast",
+      "went",
+      "run",
+      "hour"
+    ],
+    "title_token_count": 9,
+    "description_token_count": 10,
+    "full_text_token_count": 19,
+    "sentiment": "neutral",
+    "sentiment_confidence": 0.5994150042533875,
+    "sentiment_scores": {
+      "negative": 0.3447795510292053,
+      "neutral": 0.5994150042533875,
+      "positive": 0.05580541491508484
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.506275",
+    "entities": {
+      "organizations": [],
+      "locations": [
+        {
+          "text": "Runaway",
+          "label": "GPE",
+          "start": 0,
+          "end": 7
+        }
+      ],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": [
+        {
+          "text": "Buddy",
+          "label": "PERSON",
+          "start": 98,
+          "end": 103
+        }
+      ]
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 1,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 1
+    },
+    "keywords": [
+      {
+        "text": "buddy",
+        "count": 2
+      },
+      {
+        "text": "hours",
+        "count": 2
+      },
+      {
+        "text": "celebration",
+        "count": 2
+      },
+      {
+        "text": "runaway reindeer",
+        "count": 1
+      },
+      {
+        "text": "huge search operation",
+        "count": 1
+      },
+      {
+        "text": "festive celebration",
+        "count": 1
+      },
+      {
+        "text": "the animal",
+        "count": 1
+      },
+      {
+        "text": "a festive celebration",
+        "count": 1
+      },
+      {
+        "text": "the coast",
+        "count": 1
+      },
+      {
+        "text": "the run",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.878044"
+  },
+  {
+    "title": "Death toll in Indonesia floods passes 500",
+    "description": "Another 500 people are missing, while thousands more have been injured, after a cyclone hit the region.",
+    "link": "https://www.bbc.com/news/articles/c4g4enlp6kzo?at_medium=RSS&at_campaign=rss",
+    "published": "Mon, 01 Dec 2025 09:57:33 GMT",
+    "source": "BBC News",
+    "source_url": "http://feeds.bbci.co.uk/news/rss.xml",
+    "scraped_at": "2025-12-01T17:25:06.542360",
+    "scraper_type": "rss",
+    "title_clean": "death toll indonesia flood pass 500",
+    "title_tokens": [
+      "death",
+      "toll",
+      "indonesia",
+      "flood",
+      "pass",
+      "500"
+    ],
+    "description_clean": "another 500 people missing thousand injured cyclone hit region",
+    "description_tokens": [
+      "another",
+      "500",
+      "people",
+      "missing",
+      "thousand",
+      "injured",
+      "cyclone",
+      "hit",
+      "region"
+    ],
+    "full_text_clean": "death toll indonesia flood pass 500 another 500 people missing thousand injured cyclone hit region",
+    "full_text_tokens": [
+      "death",
+      "toll",
+      "indonesia",
+      "flood",
+      "pass",
+      "500",
+      "another",
+      "500",
+      "people",
+      "missing",
+      "thousand",
+      "injured",
+      "cyclone",
+      "hit",
+      "region"
+    ],
+    "title_token_count": 6,
+    "description_token_count": 9,
+    "full_text_token_count": 15,
+    "sentiment": "negative",
+    "sentiment_confidence": 0.8701058626174927,
+    "sentiment_scores": {
+      "negative": 0.8701058626174927,
+      "neutral": 0.12373656779527664,
+      "positive": 0.006157579831779003
+    },
+    "sentiment_timestamp": "2025-12-01T18:16:46.565008",
+    "entities": {
+      "organizations": [],
+      "locations": [
+        {
+          "text": "Indonesia",
+          "label": "GPE",
+          "start": 14,
+          "end": 23
+        }
+      ],
+      "money": [],
+      "dates": [],
+      "events": [],
+      "people": []
+    },
+    "entity_counts": {
+      "organizations": 0,
+      "locations": 1,
+      "money": 0,
+      "dates": 0,
+      "events": 0,
+      "people": 0
+    },
+    "keywords": [
+      {
+        "text": "indonesia",
+        "count": 2
+      },
+      {
+        "text": "floods",
+        "count": 2
+      },
+      {
+        "text": "thousands",
+        "count": 2
+      },
+      {
+        "text": "death toll",
+        "count": 1
+      },
+      {
+        "text": "500 another 500 people",
+        "count": 1
+      },
+      {
+        "text": "a cyclone",
+        "count": 1
+      },
+      {
+        "text": "the region",
+        "count": 1
+      },
+      {
+        "text": "death",
+        "count": 1
+      },
+      {
+        "text": "toll",
+        "count": 1
+      },
+      {
+        "text": "people",
+        "count": 1
+      }
+    ],
+    "extraction_timestamp": "2025-12-01T18:16:46.905071"
+  }
+]

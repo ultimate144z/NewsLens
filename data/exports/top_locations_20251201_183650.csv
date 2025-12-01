@@ -1,0 +1,21 @@
+rank,entity,count,sources,source_count
+1,US,19,BBC News; CNN Top Stories; The Guardian,3
+2,Sri Lanka,7,The Guardian,1
+3,Ukraine,6,CNN Top Stories; The Guardian,2
+4,AI,5,CNN Top Stories; The Guardian,2
+5,Indonesia,5,BBC News; The Guardian,2
+6,UK,5,BBC News; The Guardian,2
+7,Russia,4,CNN Top Stories; The Guardian,2
+8,New York,4,BBC News; CNN Top Stories; The Guardian,3
+9,Thailand,4,The Guardian,1
+10,Asia,4,The Guardian,1
+11,Moscow,4,CNN Top Stories; The Guardian,2
+12,Europe,4,The Guardian,1
+13,Washington,3,CNN Top Stories; The Guardian,2
+14,India,3,CNN Top Stories; The Guardian,2
+15,Florida,3,CNN Top Stories; The Guardian,2
+16,Australia,3,BBC News; The Guardian,2
+17,Ukrainian,2,CNN Top Stories; The Guardian,2
+18,America,2,CNN Top Stories,1
+19,Texas,2,CNN Top Stories,1
+20,Sudan,2,BBC News; CNN Top Stories,2

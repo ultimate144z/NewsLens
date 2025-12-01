@@ -1,0 +1,36 @@
+# NewsAPI Configuration
+# Get your API key from https://newsapi.org/
+
+api:
+  base_url: "https://newsapi.org/v2"
+  # API key should be stored in .env file as NEWSAPI_KEY
+  # Never commit API keys to version control
+  
+# Search parameters
+search:
+  language: "en"
+  sort_by: "publishedAt"  # Options: relevancy, popularity, publishedAt
+  page_size: 100  # Max articles per request (max: 100)
+  
+# News sources (optional - leave empty to use all sources)
+sources:
+  - bbc-news
+  - cnn
+  - al-jazeera-english
+  - reuters
+  - fox-news
+  - the-guardian-uk
+  - the-new-york-times
+  - the-washington-post
+  
+# Categories to fetch
+categories:
+  - general
+  - business
+  - technology
+  - politics
+  
+# Rate limiting
+rate_limit:
+  requests_per_day: 100  # Free tier limit
+  delay_between_requests: 1  # seconds

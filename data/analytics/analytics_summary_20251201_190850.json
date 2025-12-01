@@ -1,0 +1,580 @@
+{
+  "overview": {
+    "total_articles": 146,
+    "sources": 3,
+    "date_range": {
+      "start": "2023-03-19",
+      "end": "2025-12-01",
+      "span_days": 988
+    }
+  },
+  "sentiment": {
+    "total_articles": 146,
+    "sentiments": {
+      "negative": {
+        "count": 54,
+        "percentage": 36.99
+      },
+      "neutral": {
+        "count": 69,
+        "percentage": 47.26
+      },
+      "positive": {
+        "count": 23,
+        "percentage": 15.75
+      }
+    }
+  },
+  "sentiment_by_source": {
+    "BBC News": {
+      "total_articles": 32,
+      "sentiments": {
+        "negative": {
+          "count": 16,
+          "percentage": 50.0
+        },
+        "neutral": {
+          "count": 14,
+          "percentage": 43.75
+        },
+        "positive": {
+          "count": 2,
+          "percentage": 6.25
+        }
+      }
+    },
+    "CNN Top Stories": {
+      "total_articles": 69,
+      "sentiments": {
+        "negative": {
+          "count": 18,
+          "percentage": 26.09
+        },
+        "neutral": {
+          "count": 30,
+          "percentage": 43.48
+        },
+        "positive": {
+          "count": 21,
+          "percentage": 30.43
+        }
+      }
+    },
+    "The Guardian": {
+      "total_articles": 45,
+      "sentiments": {
+        "negative": {
+          "count": 20,
+          "percentage": 44.44
+        },
+        "neutral": {
+          "count": 25,
+          "percentage": 55.56
+        }
+      }
+    }
+  },
+  "confidence_stats": {
+    "overall": {
+      "min": 0.47,
+      "max": 0.98,
+      "avg": 0.72,
+      "count": 146
+    },
+    "by_sentiment": {
+      "negative": {
+        "min": 0.49,
+        "max": 0.87,
+        "avg": 0.69,
+        "count": 54
+      },
+      "neutral": {
+        "min": 0.47,
+        "max": 0.91,
+        "avg": 0.73,
+        "count": 69
+      },
+      "positive": {
+        "min": 0.5,
+        "max": 0.98,
+        "avg": 0.79,
+        "count": 23
+      }
+    }
+  },
+  "top_entities": {
+    "people": [
+      {
+        "entity": "Donald Trump",
+        "type": "PERSON",
+        "mentions": 5,
+        "articles": 5
+      },
+      {
+        "entity": "Sri Lanka",
+        "type": "PERSON",
+        "mentions": 3,
+        "articles": 3
+      },
+      {
+        "entity": "Duncan Spencer",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 1
+      },
+      {
+        "entity": "Pope Leo",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "McCarthy",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Jeremy Renner",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Vedika Sud",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Trump",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Donald Trump’s",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Steve Witkoff",
+        "type": "PERSON",
+        "mentions": 2,
+        "articles": 2
+      }
+    ],
+    "organizations": [
+      {
+        "entity": "CNN",
+        "type": "ORG",
+        "mentions": 6,
+        "articles": 6
+      },
+      {
+        "entity": "GOP",
+        "type": "ORG",
+        "mentions": 5,
+        "articles": 5
+      },
+      {
+        "entity": "Fox News",
+        "type": "ORG",
+        "mentions": 3,
+        "articles": 3
+      },
+      {
+        "entity": "Trump",
+        "type": "ORG",
+        "mentions": 3,
+        "articles": 3
+      },
+      {
+        "entity": "White House",
+        "type": "ORG",
+        "mentions": 3,
+        "articles": 3
+      },
+      {
+        "entity": "Reeves",
+        "type": "ORG",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Budget",
+        "type": "ORG",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "BBC",
+        "type": "ORG",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Chelsea",
+        "type": "ORG",
+        "mentions": 2,
+        "articles": 2
+      },
+      {
+        "entity": "Premier League",
+        "type": "ORG",
+        "mentions": 2,
+        "articles": 2
+      }
+    ],
+    "locations": [
+      {
+        "entity": "US",
+        "type": "GPE",
+        "mentions": 19,
+        "articles": 19
+      },
+      {
+        "entity": "Sri Lanka",
+        "type": "GPE",
+        "mentions": 7,
+        "articles": 7
+      },
+      {
+        "entity": "Ukraine",
+        "type": "GPE",
+        "mentions": 6,
+        "articles": 6
+      },
+      {
+        "entity": "UK",
+        "type": "GPE",
+        "mentions": 5,
+        "articles": 5
+      },
+      {
+        "entity": "Indonesia",
+        "type": "GPE",
+        "mentions": 5,
+        "articles": 5
+      },
+      {
+        "entity": "AI",
+        "type": "GPE",
+        "mentions": 5,
+        "articles": 5
+      },
+      {
+        "entity": "Australia",
+        "type": "GPE",
+        "mentions": 4,
+        "articles": 3
+      },
+      {
+        "entity": "New York",
+        "type": "GPE",
+        "mentions": 4,
+        "articles": 4
+      },
+      {
+        "entity": "Russia",
+        "type": "GPE",
+        "mentions": 4,
+        "articles": 4
+      },
+      {
+        "entity": "Moscow",
+        "type": "GPE",
+        "mentions": 4,
+        "articles": 4
+      }
+    ]
+  },
+  "top_keywords": [
+    {
+      "keyword": "indonesia",
+      "frequency": 47
+    },
+    {
+      "keyword": "href=\"https://www.theguardian.com",
+      "frequency": 47
+    },
+    {
+      "keyword": "people",
+      "frequency": 35
+    },
+    {
+      "keyword": "lanka",
+      "frequency": 34
+    },
+    {
+      "keyword": "sri",
+      "frequency": 32
+    },
+    {
+      "keyword": "news",
+      "frequency": 27
+    },
+    {
+      "keyword": "thailand",
+      "frequency": 23
+    },
+    {
+      "keyword": "australia",
+      "frequency": 21
+    },
+    {
+      "keyword": "floods",
+      "frequency": 20
+    },
+    {
+      "keyword": "trump",
+      "frequency": 18
+    },
+    {
+      "keyword": "sri lanka",
+      "frequency": 17
+    },
+    {
+      "keyword": "russia",
+      "frequency": 16
+    },
+    {
+      "keyword": "death",
+      "frequency": 15
+    },
+    {
+      "keyword": "ukraine",
+      "frequency": 15
+    },
+    {
+      "keyword": "reports",
+      "frequency": 14
+    },
+    {
+      "keyword": "toll",
+      "frequency": 13
+    },
+    {
+      "keyword": "hundreds",
+      "frequency": 13
+    },
+    {
+      "keyword": "years",
+      "frequency": 12
+    },
+    {
+      "keyword": "malaysia",
+      "frequency": 12
+    },
+    {
+      "keyword": "dominion",
+      "frequency": 11
+    }
+  ],
+  "source_comparison": {
+    "BBC News": {
+      "total_articles": 32,
+      "sentiment_distribution": {
+        "negative": {
+          "count": 16,
+          "percentage": 50.0
+        },
+        "neutral": {
+          "count": 14,
+          "percentage": 43.75
+        },
+        "positive": {
+          "count": 2,
+          "percentage": 6.25
+        }
+      },
+      "avg_confidence": 0.73,
+      "top_entities": [
+        {
+          "entity": "England",
+          "count": 3
+        },
+        {
+          "entity": "Chelsea",
+          "count": 3
+        },
+        {
+          "entity": "Budget",
+          "count": 2
+        },
+        {
+          "entity": "UK",
+          "count": 2
+        },
+        {
+          "entity": "BBC",
+          "count": 2
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "england",
+          "count": 6
+        },
+        {
+          "keyword": "people",
+          "count": 4
+        },
+        {
+          "keyword": "hell",
+          "count": 4
+        },
+        {
+          "keyword": "australia",
+          "count": 4
+        },
+        {
+          "keyword": "bowler",
+          "count": 4
+        }
+      ],
+      "sentiment_bias": {
+        "score": -0.438,
+        "tendency": "negative",
+        "positive_ratio": 0.062,
+        "negative_ratio": 0.5,
+        "neutral_ratio": 0.438
+      }
+    },
+    "CNN Top Stories": {
+      "total_articles": 69,
+      "sentiment_distribution": {
+        "negative": {
+          "count": 18,
+          "percentage": 26.09
+        },
+        "neutral": {
+          "count": 30,
+          "percentage": 43.48
+        },
+        "positive": {
+          "count": 21,
+          "percentage": 30.43
+        }
+      },
+      "avg_confidence": 0.74,
+      "top_entities": [
+        {
+          "entity": "Tuesday",
+          "count": 8
+        },
+        {
+          "entity": "US",
+          "count": 6
+        },
+        {
+          "entity": "CNN",
+          "count": 6
+        },
+        {
+          "entity": "GOP",
+          "count": 5
+        },
+        {
+          "entity": "Monday",
+          "count": 4
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "dominion",
+          "count": 11
+        },
+        {
+          "keyword": "tuesday",
+          "count": 10
+        },
+        {
+          "keyword": "fox",
+          "count": 8
+        },
+        {
+          "keyword": "january",
+          "count": 7
+        },
+        {
+          "keyword": "russia",
+          "count": 7
+        }
+      ],
+      "sentiment_bias": {
+        "score": 0.043,
+        "tendency": "neutral",
+        "positive_ratio": 0.304,
+        "negative_ratio": 0.261,
+        "neutral_ratio": 0.435
+      }
+    },
+    "The Guardian": {
+      "total_articles": 45,
+      "sentiment_distribution": {
+        "negative": {
+          "count": 20,
+          "percentage": 44.44
+        },
+        "neutral": {
+          "count": 25,
+          "percentage": 55.56
+        }
+      },
+      "avg_confidence": 0.7,
+      "top_entities": [
+        {
+          "entity": "US",
+          "count": 12
+        },
+        {
+          "entity": "Sri Lanka",
+          "count": 10
+        },
+        {
+          "entity": "Sunday",
+          "count": 6
+        },
+        {
+          "entity": "Ukraine",
+          "count": 4
+        },
+        {
+          "entity": "Indonesia",
+          "count": 4
+        }
+      ],
+      "top_keywords": [
+        {
+          "keyword": "href=\"https://www.theguardian.com",
+          "count": 47
+        },
+        {
+          "keyword": "indonesia",
+          "count": 45
+        },
+        {
+          "keyword": "lanka",
+          "count": 34
+        },
+        {
+          "keyword": "sri",
+          "count": 32
+        },
+        {
+          "keyword": "people",
+          "count": 24
+        }
+      ],
+      "sentiment_bias": {
+        "score": -0.444,
+        "tendency": "negative",
+        "positive_ratio": 0.0,
+        "negative_ratio": 0.444,
+        "neutral_ratio": 0.556
+      }
+    }
+  }
+}
