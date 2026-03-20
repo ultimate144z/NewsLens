@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, "claude/**"]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    name: Test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Download spaCy model
+        run: python -m spacy download en_core_web_sm
+
+      - name: Download NLTK data
+        run: python -m nltk.downloader punkt stopwords wordnet averaged_perceptron_tagger omw-1.4
+
+      - name: Lint with flake8
+        run: flake8 src/ app/ utils/ run.py --count --statistics
+
+      - name: Run tests
+        run: pytest tests/ -v --tb=short -m "not network and not ml"
+
+      - name: Run tests with coverage
+        run: pytest tests/ --cov=src --cov-report=xml --cov-report=term-missing -m "not network and not ml"
+
+      - name: Upload coverage to Codecov
+        if: matrix.python-version == '3.11'
+        uses: codecov/codecov-action@v4
+        with:
+          file: coverage.xml
+          fail_ci_if_error: false

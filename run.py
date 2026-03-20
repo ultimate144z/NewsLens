@@ -30,8 +30,7 @@ sys.path.insert(0, str(project_root))
 
 from src.ingestion.rss_scraper import RSScraper
 from src.ingestion.newsapi_scraper import NewsAPIScraper
-from src.preprocessing.cleaner import TextCleaner
-from src.preprocessing.preprocessor import TextPreprocessor
+from src.preprocessing.preprocess import TextPreprocessor
 from src.analysis.sentiment import SentimentAnalyzer
 from src.analysis.entities import EntityExtractor
 from src.storage.database import DatabaseManager
@@ -55,7 +54,6 @@ class PipelineRunner:
         # Initialize components
         self.rss_scraper = None
         self.news_api = None
-        self.cleaner = None
         self.preprocessor = None
         self.sentiment_analyzer = None
         self.entity_extractor = None
@@ -98,12 +96,12 @@ class PipelineRunner:
             
             # Scrape RSS feeds
             self.log("Scraping RSS feeds...")
-            rss_articles = self.rss_scraper.scrape_all()
+            rss_articles = self.rss_scraper.fetch_all_feeds()
             self.log(f"RSS feeds scraped: {len(rss_articles)} articles")
-            
+
             # Fetch from NewsAPI
             self.log("Fetching from NewsAPI...")
-            api_articles = self.news_api.fetch_articles()
+            api_articles = self.news_api.fetch_by_categories()
             self.log(f"NewsAPI fetched: {len(api_articles)} articles")
             
             # Combine and deduplicate
@@ -137,17 +135,16 @@ class PipelineRunner:
         self.log("=" * 60)
         
         try:
-            # Initialize preprocessors
-            self.cleaner = TextCleaner()
+            # Initialize preprocessor
             self.preprocessor = TextPreprocessor()
-            
+
             preprocessed = []
             for i, article in enumerate(articles, 1):
                 if self.verbose and i % 10 == 0:
                     self.log(f"Preprocessing: {i}/{len(articles)}")
-                
+
                 # Clean text
-                article['cleaned_text'] = self.cleaner.clean_text(article.get('description', ''))
+                article['cleaned_text'] = self.preprocessor.clean_text(article.get('description', ''))
                 
                 # Preprocess
                 article['preprocessed_title'] = self.preprocessor.preprocess(article.get('title', ''))
@@ -196,8 +193,9 @@ class PipelineRunner:
                     self.log(f"Extracting entities: {i}/{len(analyzed)}")
                 
                 text = article.get('cleaned_text', '') or article.get('description', '')
-                entities, keywords = self.entity_extractor.extract(text)
-                
+                entities = self.entity_extractor.extract_entities(text)
+                keywords = self.entity_extractor.extract_keywords(text)
+
                 article['entities'] = entities
                 article['keywords'] = keywords
             
@@ -235,7 +233,7 @@ class PipelineRunner:
             
             # Store in database
             self.log("Storing articles in database...")
-            stored = self.db_manager.batch_insert_articles(articles)
+            stored = self.db_manager.insert_articles_batch(articles)
             self.stats['articles_stored'] = stored
             self.log(f"Stored {stored} articles in database")
             
@@ -264,8 +262,9 @@ class PipelineRunner:
         
         try:
             # Initialize analytics
-            self.analytics = NewsAnalytics(articles)
-            
+            self.analytics = NewsAnalytics()
+            self.analytics.load_articles(articles)
+
             # Generate comprehensive summary
             self.log("Generating analytics summary...")
             summary = self.analytics.get_comprehensive_summary()

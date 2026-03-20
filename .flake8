@@ -1,0 +1,28 @@
+[flake8]
+max-line-length = 150
+exclude =
+    __pycache__,
+    .git,
+    .github,
+    venv,
+    .venv,
+    data,
+    logs,
+    htmlcov,
+    *.egg-info
+
+# Ignored categories
+# -------------------
+# W291/W293 – trailing/blank-line whitespace       (Black's responsibility)
+# E1xx/E2xx  – indentation & whitespace style       (Black's responsibility)
+# E302/E303  – blank lines between definitions      (Black's responsibility)
+# E4xx       – imports order                        (isort's responsibility)
+# F401       – imported but unused                  (common in re-export & __init__ files)
+# F841       – local variable assigned but never used (pre-existing)
+# E722       – bare except                          (pre-existing, not a correctness issue here)
+extend-ignore =
+    W291, W293,
+    E1, E2, E3,
+    E402,
+    F401, F841,
+    E722

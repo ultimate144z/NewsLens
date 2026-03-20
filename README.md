@@ -2,17 +2,18 @@
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.13+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.9.1-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
-[![Transformers](https://img.shields.io/badge/Transformers-4.57.3-FFD21E.svg)](https://huggingface.co/transformers/)
-[![Streamlit](https://img.shields.io/badge/Streamlit-1.51.0-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io)
-[![spaCy](https://img.shields.io/badge/spaCy-3.8.11-09A3D5.svg?logo=spacy&logoColor=white)](https://spacy.io)
+[![CI](https://github.com/ultimate144z/NewsLens/actions/workflows/ci.yml/badge.svg)](https://github.com/ultimate144z/NewsLens/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
+[![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-FFD21E.svg)](https://huggingface.co/transformers/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io)
+[![spaCy](https://img.shields.io/badge/spaCy-NER-09A3D5.svg)](https://spacy.io)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-**An end-to-end NLP-powered media analysis system that reveals how different news outlets frame the same stories.**
+**An end-to-end NLP pipeline that reveals how different news outlets frame the same stories.**
 
-[Features](#features) • [Installation](#installation) • [Usage](#usage) • [Architecture](#architecture) • [Documentation](#documentation)
+[Features](#features) • [Quick Start](#quick-start) • [Installation](#installation) • [Usage](#usage) • [Architecture](#architecture) • [Docker](#docker) • [Contributing](#contributing)
 
 </div>
 
@@ -20,175 +21,216 @@
 
 ## Overview
 
-NewsLens is a production-ready **sentiment analysis and media bias detection system** that:
-- Aggregates news from multiple sources (RSS feeds + NewsAPI)
-- Analyzes sentiment using state-of-the-art transformer models
-- Extracts named entities and keywords with spaCy
-- Visualizes trends and bias patterns in an interactive dashboard
-- Stores historical data for temporal analysis
+NewsLens is a **sentiment analysis and media bias detection system** that:
 
-**Use Cases:** Data science portfolios, NLP research, media monitoring, bias detection, trend analysis.
+- Aggregates headlines from multiple RSS feeds (BBC, CNN, Al Jazeera, Reuters, Fox News, Guardian, NYT, Washington Post) and NewsAPI
+- Classifies sentiment with a state-of-the-art RoBERTa transformer (`cardiffnlp/twitter-roberta-base-sentiment-latest`)
+- Extracts named entities (people, organisations, locations) with spaCy NER
+- Stores historical data in SQLite for temporal analysis
+- Visualises trends and source-level bias in an interactive Streamlit dashboard
+
+**Use Cases:** Data science portfolios · NLP research · media monitoring · bias detection · journalistic tooling.
 
 ---
 
 ## Features
 
 ### Multi-Source Data Aggregation
-- **RSS Feeds**: BBC, CNN, Al-Jazeera, Reuters, and more
-- **NewsAPI Integration**: 70,000+ sources worldwide
-- **Configurable Sources**: Easy YAML-based source management
+- **8 RSS Feeds** — BBC, CNN, Al Jazeera, Reuters, Fox News, Guardian, NYT, Washington Post
+- **NewsAPI Integration** — 70,000+ additional sources worldwide
+- **Configurable** — add or remove sources via a single YAML file
 
 ### Advanced NLP Analysis
-- **Sentiment Classification**: Using HuggingFace transformers (`cardiffnlp/twitter-roberta-base-sentiment-latest`)
-- **Named Entity Recognition**: People, organizations, locations with spaCy
-- **Keyword Extraction**: NLTK-powered noun phrase extraction
-- **Confidence Scoring**: Track model certainty for each prediction
+- **Sentiment Classification** — positive / neutral / negative with per-class confidence scores
+- **Named Entity Recognition** — people, organisations, geopolitical entities, dates, money
+- **Keyword Extraction** — noun-phrase frequency analysis with spaCy
+- **Confidence Scoring** — track model certainty for every prediction
 
 ### Interactive Analytics Dashboard
-- **Sentiment Trends**: Time-series visualization of news sentiment
-- **Source Comparison**: Side-by-side outlet bias analysis
-- **Entity Tracking**: Monitor mentions of people, places, organizations
-- **Word Clouds**: Visual keyword frequency analysis
-- **Real-time Filtering**: By source, sentiment, date range, keywords
+- **Sentiment Trends** — time-series charts of how coverage tone shifts day-by-day
+- **Source Comparison** — side-by-side bias scores and sentiment profiles per outlet
+- **Entity Tracking** — most-mentioned people, places, and organisations
+- **Keyword Analysis** — frequency bar charts
+- **Real-time Filtering** — by source, sentiment, date range, keyword, confidence threshold
+
+### Trend & Comparison Engine
+- `TrendAnalysis` — rolling sentiment momentum, keyword trends over time, volume by source
+- `SourceComparison` — headline overlap detection, per-source entity focus, confidence comparison
 
 ### Robust Data Storage
-- **SQLite Database**: Historical article tracking with full-text search
-- **CSV Export**: Easy data export for further analysis
-- **JSON Archives**: Structured data persistence
+- **SQLite** with optimised indexes for fast querying
+- **CSV Export** — full articles, sentiment summaries, entity rankings
+- **JSON Archives** — timestamped pipeline snapshots for reproducibility
+
+---
+
+## Quick Start
+
+```bash
+# 1. Clone
+git clone https://github.com/ultimate144z/NewsLens.git
+cd NewsLens
+
+# 2. Install (Python 3.11+)
+make install          # pip install + spaCy model + NLTK data
+
+# 3. (Optional) add NewsAPI key
+cp .env.template .env  # then edit .env: NEWSAPI_KEY=your_key
+
+# 4. Run full pipeline
+make run              # ingest → preprocess → analyze → store → analytics
+
+# 5. Launch dashboard
+make dashboard        # opens http://localhost:8501
+```
+
+Or with Docker — no Python setup required:
+
+```bash
+docker-compose up dashboard          # dashboard only
+docker-compose run --rm pipeline     # full pipeline
+```
 
 ---
 
 ## Installation
 
 ### Prerequisites
-- Python 3.13+ (tested with 3.13.9)
-- 4GB RAM minimum (8GB recommended for transformer models)
-- Optional: NewsAPI key for enhanced data collection
 
-### Installation
+| Requirement | Minimum | Recommended |
+|-------------|---------|-------------|
+| Python | 3.11 | 3.12 |
+| RAM | 4 GB | 8 GB |
+| Disk | 2 GB | 4 GB |
+| NewsAPI key | optional | free tier |
+
+### Step-by-step
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/NewsLens.git
+git clone https://github.com/ultimate144z/NewsLens.git
 cd NewsLens
 
-# Create virtual environment
+# Create and activate a virtual environment
 python -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
 
-# Activate virtual environment
-# Windows:
-venv\Scripts\activate
-# macOS/Linux:
-source venv/bin/activate
-
-# Install dependencies
+# Install all dependencies
 pip install -r requirements.txt
 
-# Download spaCy language model
+# Download the spaCy language model
 python -m spacy download en_core_web_sm
 
-# (Optional) Set up NewsAPI key
-# Create .env file with: NEWSAPI_KEY=your_key_here
+# Download NLTK data
+python -m nltk.downloader punkt stopwords wordnet averaged_perceptron_tagger omw-1.4
+
+# (Optional) configure NewsAPI
+cp .env.template .env
+# Edit .env and set: NEWSAPI_KEY=your_api_key_here
 ```
 
 ---
 
 ## Usage
 
-### Option 1: Quick Commands (Recommended)
+### Makefile shortcuts (recommended)
 
 ```bash
-# Launch the dashboard
-python quickstart.py dashboard
-
-# Run tests
-python quickstart.py tests
-
-# Show help
-python quickstart.py help
+make install       # Full setup
+make run           # Complete pipeline
+make dashboard     # Launch UI
+make test          # Run test suite
+make lint          # flake8
+make format        # black
+make help          # All commands
 ```
 
-### Option 2: Full Pipeline
+### Pipeline CLI
 
 ```bash
-# Run complete analysis pipeline
-python run.py --full
-
-# Run specific components
-python run.py --ingest    # Data collection only
-python run.py --dashboard # Dashboard only
+python run.py --full              # Complete pipeline
+python run.py --full --dashboard  # Pipeline + launch dashboard
+python run.py --ingest            # Ingest only
+python run.py --dashboard         # Dashboard only
 ```
 
-### Option 3: Manual Streamlit
+### Direct Streamlit
 
 ```bash
 streamlit run app/dashboard.py
 ```
 
-The dashboard will open at `http://localhost:8501`
+Dashboard opens at `http://localhost:8501`.
+
+---
+
+## Docker
+
+No Python environment needed — just Docker.
+
+```bash
+# Build image
+docker-compose build
+
+# Start dashboard (http://localhost:8501)
+docker-compose up dashboard
+
+# Run full pipeline (writes to ./data)
+docker-compose run --rm pipeline
+
+# Pass a NewsAPI key
+NEWSAPI_KEY=your_key docker-compose up dashboard
+```
+
+The `./data` directory is mounted as a volume so data persists between runs.
 
 ---
 
 ## Architecture
 
-### System Pipeline
+### Pipeline
 
 ```
-┌─────────────────────┐
-│   Data Sources      │
-│  (RSS + NewsAPI)    │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Data Ingestion     │
-│  (RSS/API Scrapers) │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Preprocessing      │
-│  (NLTK + Cleaning)  │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  NLP Analysis       │
-│  (Transformers +    │
-│   spaCy NER)        │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Storage Layer      │
-│  (SQLite + CSV)     │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Analytics Engine   │
-│  (Trend Analysis)   │
-└──────────┬──────────┘
-           │
-           ▼
-┌─────────────────────┐
-│  Dashboard          │
-│  (Streamlit UI)     │
-└─────────────────────┘
+RSS Feeds + NewsAPI
+        │
+        ▼
+  Data Ingestion          src/ingestion/
+  (feedparser + newsapi)
+        │
+        ▼
+  Preprocessing           src/preprocessing/
+  (NLTK clean + tokenise)
+        │
+        ▼
+  NLP Analysis            src/analysis/
+  (RoBERTa sentiment +
+   spaCy NER)
+        │
+        ▼
+  Storage                 src/storage/
+  (SQLite + CSV)
+        │
+        ▼
+  Analytics Engine        src/analytics/
+  (trends + bias)
+        │
+        ▼
+  Streamlit Dashboard     app/
 ```
 
 ### Technology Stack
 
 | Component | Technology | Purpose |
 |-----------|-----------|---------|
-| **Data Collection** | feedparser, newsapi-python, requests | Multi-source news aggregation |
+| **Data Collection** | feedparser, newsapi-python, requests | Multi-source aggregation |
 | **NLP** | HuggingFace Transformers, spaCy, NLTK | Sentiment & entity analysis |
-| **ML Framework** | PyTorch | Transformer model inference |
-| **Data Processing** | pandas, numpy | Data manipulation & analytics |
-| **Storage** | SQLAlchemy, SQLite | Persistent data storage |
-| **Visualization** | Streamlit, Plotly, Matplotlib | Interactive dashboards |
+| **ML Framework** | PyTorch | Transformer inference |
+| **Data Processing** | pandas, numpy | Analytics & manipulation |
+| **Storage** | SQLite (via sqlite3) | Persistent article store |
+| **Visualisation** | Streamlit, Plotly | Interactive dashboard |
 | **Configuration** | PyYAML, python-dotenv | Settings management |
-| **Testing** | pytest, pytest-cov | Unit testing & coverage |
+| **Logging** | loguru | Structured logging |
+| **Testing** | pytest, pytest-cov | Unit tests & coverage |
 
 ---
 
@@ -197,239 +239,118 @@ The dashboard will open at `http://localhost:8501`
 ```
 NewsLens/
 │
-├── app/                      # Streamlit dashboard application
-│   ├── dashboard.py          # Main dashboard entry point
-│   ├── components/           # Reusable UI components
-│   │   ├── charts.py         # Chart visualizations
-│   │   ├── tables.py         # Data tables
-│   │   └── filters.py        # Filter controls
-│   └── pages/                # Multi-page dashboard
-│       ├── 1_latest_news.py  # Recent articles view
-│       ├── 2_source_compare.py # Source bias comparison
-│       ├── 3_trends.py       # Temporal trend analysis
-│       └── 4_keywords.py     # Keyword analytics
+├── app/                        # Streamlit dashboard
+│   ├── dashboard.py            # Entry point
+│   ├── utils.py                # Data loading & helpers
+│   ├── components/
+│   │   ├── charts.py           # Reusable Plotly chart functions
+│   │   ├── filters.py          # Sidebar filter widgets + article filtering
+│   │   └── tables.py           # Article and metric table renderers
+│   └── pages/
+│       ├── 1_Overview.py       # Key metrics & sentiment summary
+│       ├── 2_Sentiment.py      # Sentiment deep-dive
+│       └── 3_Sources.py        # Source comparison & bias
 │
-├── src/                      # Core application logic
-│   ├── ingestion/            # Data collection modules
-│   │   ├── rss_scraper.py    # RSS feed scraper
-│   │   └── newsapi_scraper.py # NewsAPI client
-│   ├── preprocessing/        # Text preprocessing
-│   │   └── preprocess.py     # Text cleaning pipeline
-│   ├── analysis/             # NLP analysis
-│   │   ├── sentiment.py      # Sentiment analyzer
-│   │   └── entities.py       # Entity extractor
-│   ├── storage/              # Data persistence
-│   │   ├── database.py       # SQLite manager
-│   │   └── csv_manager.py    # CSV operations
-│   └── analytics/            # Analytics engine
-│       ├── analytics.py      # Core analytics
-│       ├── trend_analysis.py # Temporal patterns
-│       └── compare_sources.py # Source comparison
+├── src/                        # Core logic
+│   ├── ingestion/
+│   │   ├── rss_scraper.py      # RSS feed scraper (8 sources)
+│   │   └── newsapi_scraper.py  # NewsAPI client
+│   ├── preprocessing/
+│   │   └── preprocess.py       # Text cleaning pipeline
+│   ├── analysis/
+│   │   ├── sentiment.py        # RoBERTa sentiment analyser
+│   │   └── entities.py         # spaCy NER + keyword extraction
+│   ├── storage/
+│   │   ├── database.py         # SQLite manager
+│   │   └── csv_manager.py      # CSV export
+│   └── analytics/
+│       ├── analytics.py        # Core analytics & summary generator
+│       ├── trend_analysis.py   # Temporal trend engine
+│       └── compare_sources.py  # Source comparison engine
 │
-├── config/                   # Configuration files
-│   ├── rss_feeds.yaml        # RSS feed URLs
-│   ├── newsapi_config.yaml   # NewsAPI settings
-│   └── model_config.yaml     # ML model settings
+├── config/
+│   ├── rss_feeds.yaml          # Feed URLs & scraping settings
+│   ├── newsapi_config.yaml     # NewsAPI settings
+│   └── model_config.yaml       # NLP model & preprocessing config
 │
-├── data/                     # Data storage (gitignored)
-│   ├── raw/                  # Raw scraped data
-│   ├── processed/            # Processed data
-│   └── newslens.db           # SQLite database
+├── tests/                      # pytest suite (40+ tests)
+├── utils/
+│   ├── logger.py               # loguru setup
+│   └── helpers.py              # Config loading & path helpers
 │
-├── tests/                    # Unit tests
-│   ├── test_ingestion.py     # Scraper tests
-│   ├── test_preprocessing.py # Preprocessing tests
-│   ├── test_analysis.py      # NLP tests
-│   └── run_tests.py          # Test runner
-│
-├── docs/                     # Documentation
-│   ├── DEVELOPMENT_LOG.md    # Development history
-│   ├── OPTIMIZATION_GUIDE.md # Performance tuning
-│   └── PROJECT_SUMMARY.md    # Project overview
-│
-├── utils/                    # Utility functions
-│   ├── logger.py             # Logging setup
-│   └── helpers.py            # Helper functions
-│
-├── run.py                    # Main pipeline runner
-├── quickstart.py             # Quick command interface
-├── requirements.txt          # Python dependencies
-└── README.md                 # This file
+├── Dockerfile
+├── docker-compose.yml
+├── Makefile
+├── run.py                      # Pipeline orchestrator CLI
+├── quickstart.py               # Quick command wrapper
+└── requirements.txt
 ```
 
 ---
 
 ## Testing
 
-Run the test suite to ensure everything works correctly:
-
 ```bash
 # Run all tests
-python quickstart.py tests
+make test
 
-# Or use pytest directly
-pytest tests/ -v
+# With HTML coverage report
+make test-cov
+# then open htmlcov/index.html
 
-# With coverage report
-pytest tests/ --cov=src --cov-report=html
+# pytest directly
+pytest tests/ -v --tb=short
 ```
 
-Test coverage: **40+ test cases** across all modules.
+Test suite: **40+ unit tests** across ingestion, preprocessing, analysis, storage, analytics, and dashboard modules.
 
 ---
 
-## Project Statistics
+## Configuration
 
-- **Total Files**: 44 Python/config files
-- **Lines of Code**: ~11,700
-- **Test Coverage**: 40+ unit tests
-- **Data Sources**: 8+ RSS feeds + NewsAPI
-- **Supported Languages**: English (expandable to 100+)
-- **Dashboard Pages**: 4 interactive pages
-- **Database Tables**: 3 (articles, entities, keywords)
-
----
-
-## Key Highlights
-
-### Technical Excellence
-- **Production-Quality Code**: Type hints, docstrings, comprehensive error handling
-- **Industry Standards**: Modular architecture, separation of concerns
-- **Comprehensive Testing**: pytest suite with coverage reporting
-- **CI/CD Ready**: Black formatter, flake8 linting
-
-### Real-World Application
-- **Multi-Source Integration**: RSS feeds + REST APIs
-- **State-of-the-Art NLP**: Transformer models + spaCy NER
-- **Scalable Storage**: SQLite with optimized indexes
-- **Interactive Visualization**: Streamlit dashboard with multi-page layout
-
-### Professional Value
-- **Full-Stack Data Science**: Data collection, ML processing, visualization
-- **Best Practices**: Logging, configuration management, unit testing
-- **Extensible Design**: Clear roadmap for enterprise features
-- **Well-Documented**: 2,000+ lines of comprehensive documentation  
-
----
-
-## Future Enhancements
-
-### Phase 1: Quick Wins (1-2 weeks)
-- [ ] Scheduled execution (Windows Task Scheduler / cron)
-- [ ] Dashboard auto-refresh
-- [ ] Enhanced error notifications
-- [ ] Export analytics to PDF/CSV reports
-
-### Phase 2: Advanced Features (1-2 months)
-- [ ] Multi-language sentiment analysis (50+ languages)
-- [ ] Topic clustering with LDA
-- [ ] Full article text extraction
-- [ ] Historical trend predictions
-- [ ] Fake news detection
-
-### Phase 3: Production Deployment (2-3 months)
-- [ ] Docker containerization
-- [ ] Cloud deployment (AWS/GCP/Azure)
-- [ ] Real-time streaming ingestion
-- [ ] User authentication system
-- [ ] REST API for integrations
-
-### Phase 4: Enterprise Scale (3-6 months)
-- [ ] Microservices architecture
-- [ ] Message queue (Kafka/RabbitMQ)
-- [ ] Distributed processing
-- [ ] Multi-tenant support
-- [ ] Advanced bias detection algorithms
-
-See [OPTIMIZATION_GUIDE.md](docs/OPTIMIZATION_GUIDE.md) for detailed implementation roadmap.
-
----
-
-## Documentation
-
-- **[OPTIMIZATION_GUIDE.md](docs/OPTIMIZATION_GUIDE.md)**: Performance tuning and scaling strategies
-- **[CONTRIBUTING.md](CONTRIBUTING.md)**: Contribution guidelines and development workflow
+| File | Purpose |
+|------|---------|
+| `config/rss_feeds.yaml` | Add/remove RSS sources, set timeout & retry |
+| `config/newsapi_config.yaml` | Categories, language, page size |
+| `config/model_config.yaml` | Sentiment model, spaCy model, preprocessing flags |
+| `.env` | `NEWSAPI_KEY`, `LOG_LEVEL` |
 
 ---
 
 ## Contributing
 
-Contributions are welcome! Please follow these guidelines:
+Contributions are welcome!
 
 1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Make your changes with proper docstrings and type hints
-4. Run tests (`pytest tests/`)
-5. Format code (`black .`)
-6. Commit changes (`git commit -m 'Add AmazingFeature'`)
-7. Push to branch (`git push origin feature/AmazingFeature`)
-8. Open a Pull Request
+2. Create a feature branch: `git checkout -b feature/my-feature`
+3. Write code with type hints and docstrings
+4. Run `make test` and `make lint` — both must pass
+5. Format: `make format`
+6. Open a pull request
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT — see [LICENSE](LICENSE).
 
 ---
 
-## Contact & Support
+## Acknowledgements
 
-**Author**: Sarim Farooq  
-**GitHub**: [@ultimate144z](https://github.com/ultimate144z)
-
-### Getting Help
-- Open an [issue](https://github.com/ultimate144z/NewsLens/issues) for bugs or feature requests
-- Check [documentation](docs/) for detailed guides
-- Star the repository if you find it useful
-
----
-
-## Acknowledgments
-
-- **HuggingFace**: Transformer models for sentiment analysis
-- **spaCy**: Named entity recognition capabilities
-- **Streamlit**: Rapid dashboard development framework
-- **NewsAPI**: Comprehensive news data access
-- **Open Source Community**: Various libraries and tools
-
----
-
-## Development Roadmap
-
-**Phase 0: Foundation** (Completed)
-- Project setup & structure
-- Core modules implementation
-- Basic dashboard
-- Testing framework
-
-**Phase 1: Production Ready** (Completed)
-- Enhanced error handling
-- Comprehensive documentation
-- Type hints & docstrings
-- Optimized dependencies
-
-**Phase 2: Automation** (Planned)
-- Scheduled execution
-- Email notifications
-- Enhanced analytics
-
-**Phase 3: Cloud Deployment** (Planned)
-- Docker containerization
-- CI/CD pipeline
-- Production deployment
-
-**Phase 4: Advanced Features** (Planned)
-- Real-time processing
-- ML model improvements
-- REST API development
+- [Cardiff NLP](https://huggingface.co/cardiffnlp) — RoBERTa sentiment model
+- [spaCy](https://spacy.io) — industrial-strength NLP
+- [Streamlit](https://streamlit.io) — rapid dashboard framework
+- [NewsAPI](https://newsapi.org) — news data API
 
 ---
 
 <div align="center">
 
-**Developed by Sarim Farooq**
+Developed by [Sarim Farooq](https://github.com/ultimate144z)
 
-[Report Bug](https://github.com/ultimate144z/NewsLens/issues) · [Request Feature](https://github.com/ultimate144z/NewsLens/issues) · [Documentation](docs/)
+[Report Bug](https://github.com/ultimate144z/NewsLens/issues) · [Request Feature](https://github.com/ultimate144z/NewsLens/issues)
 
 </div>

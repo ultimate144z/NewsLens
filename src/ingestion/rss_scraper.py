@@ -215,7 +215,7 @@ def main():
     articles = scraper.fetch_all_feeds()
     
     if articles:
-        logger.info(f"\nSample article:")
+        logger.info("\nSample article:")
         logger.info(f"Title: {articles[0]['title']}")
         logger.info(f"Source: {articles[0]['source']}")
         logger.info(f"Link: {articles[0]['link'][:80]}...")

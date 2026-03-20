@@ -45,6 +45,9 @@ data/raw/*.json
 data/raw/*.csv
 data/processed/*.json
 data/processed/*.csv
+data/analytics/*.json
+data/exports/*.csv
+data/exports/*.json
 *.db
 *.sqlite
 

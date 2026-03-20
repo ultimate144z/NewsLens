@@ -1,6 +1,5 @@
 # Python dependencies for NewsLens project
-# Generated on December 1, 2025
-# Python 3.13+ required
+# Python 3.11+ required
 
 # Web Scraping & Data Collection
 feedparser==6.0.12

@@ -11,6 +11,8 @@ from datetime import datetime
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
 
+import pytest
+
 from src.ingestion import RSScraper, NewsAPIScraper
 from utils.logger import get_logger
 from utils.helpers import get_data_dir
@@ -18,6 +20,7 @@ from utils.helpers import get_data_dir
 logger = get_logger("ingestion_test")
 
 
+@pytest.mark.network
 def test_rss_scraper():
     """Test RSS scraper functionality"""
     logger.info("\n" + "=" * 60)
@@ -60,6 +63,7 @@ def test_rss_scraper():
         return False
 
 
+@pytest.mark.network
 def test_newsapi_scraper():
     """Test NewsAPI scraper functionality"""
     logger.info("\n" + "=" * 60)
@@ -104,6 +108,7 @@ def test_newsapi_scraper():
         return False
 
 
+@pytest.mark.network
 def test_combined_ingestion():
     """Test fetching from both sources"""
     logger.info("\n" + "=" * 60)
