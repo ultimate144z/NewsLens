@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  # Run the full analysis pipeline (ingest → preprocess → analyze → store → analytics)
+  pipeline:
+    build: .
+    command: python run.py --full
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+    environment:
+      - NEWSAPI_KEY=${NEWSAPI_KEY:-}
+    profiles:
+      - pipeline
+
+  # Interactive Streamlit dashboard
+  dashboard:
+    build: .
+    command: streamlit run app/dashboard.py --server.port=8501 --server.address=0.0.0.0
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - NEWSAPI_KEY=${NEWSAPI_KEY:-}
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s

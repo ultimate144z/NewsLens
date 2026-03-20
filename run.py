@@ -262,8 +262,9 @@ class PipelineRunner:
         
         try:
             # Initialize analytics
-            self.analytics = NewsAnalytics(articles)
-            
+            self.analytics = NewsAnalytics()
+            self.analytics.load_articles(articles)
+
             # Generate comprehensive summary
             self.log("Generating analytics summary...")
             summary = self.analytics.get_comprehensive_summary()
