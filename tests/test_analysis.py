@@ -12,6 +12,8 @@ from loguru import logger
 # Add src to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+import pytest
+
 from src.analysis import SentimentAnalyzer, EntityExtractor
 from utils.helpers import get_data_dir
 
@@ -20,6 +22,7 @@ logger.remove()
 logger.add(sys.stdout, format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level:8}</level> | <cyan>{name}</cyan>:<cyan>{function}</cyan>:<cyan>{line}</cyan> - <level>{message}</level>")
 
 
+@pytest.mark.ml
 def test_sentiment_analysis():
     """Test sentiment analysis on sample texts"""
     logger.info("\n" + "=" * 60)
@@ -78,6 +81,7 @@ def test_sentiment_analysis():
     return analyzer
 
 
+@pytest.mark.ml
 def test_entity_extraction():
     """Test entity extraction on sample texts"""
     logger.info("\n" + "=" * 60)
@@ -124,6 +128,7 @@ def test_entity_extraction():
     return extractor
 
 
+@pytest.mark.ml
 def test_article_analysis():
     """Test analysis on real preprocessed articles"""
     logger.info("\n" + "=" * 60)
@@ -200,6 +205,7 @@ def test_article_analysis():
     return sentiment_analyzer, entity_extractor, sample_articles
 
 
+@pytest.mark.ml
 def test_batch_analysis():
     """Test full batch analysis on all articles"""
     logger.info("\n" + "=" * 60)

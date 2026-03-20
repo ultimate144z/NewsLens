@@ -7,9 +7,13 @@ from pathlib import Path
 import json
 from datetime import datetime
 
+import pytest
+
 # Add project root to path
 project_root = Path(__file__).parent
 sys.path.insert(0, str(project_root))
+
+nltk = pytest.importorskip("nltk", reason="nltk not installed")
 
 from src.preprocessing import TextPreprocessor
 from utils.logger import get_logger
