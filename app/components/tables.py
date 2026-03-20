@@ -5,7 +5,7 @@ Functions in this module render Streamlit components directly (they call
 ``st.*`` internally) so callers only need to pass data.
 """
 
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 import pandas as pd
 import streamlit as st

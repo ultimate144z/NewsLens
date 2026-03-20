@@ -527,7 +527,7 @@ if __name__ == "__main__":
     
     # Get statistics
     stats = db.get_statistics()
-    print(f"\nDatabase Statistics:")
+    print("\nDatabase Statistics:")
     print(f"  Total Articles: {stats['total_articles']}")
     print(f"  Total Entities: {stats['total_entities']}")
     print(f"  Total Keywords: {stats['total_keywords']}")

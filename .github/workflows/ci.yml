@@ -36,7 +36,7 @@ jobs:
         run: python -m nltk.downloader punkt stopwords wordnet averaged_perceptron_tagger omw-1.4
 
       - name: Lint with flake8
-        run: flake8 src/ app/ utils/ run.py --max-line-length=120 --exclude=__pycache__ --count --statistics
+        run: flake8 src/ app/ utils/ run.py --count --statistics
 
       - name: Run tests
         run: pytest tests/ -v --tb=short

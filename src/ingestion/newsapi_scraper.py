@@ -51,7 +51,7 @@ class NewsAPIScraper:
         self.rate_limit = self.config.get("rate_limit", {})
         self.delay = self.rate_limit.get("delay_between_requests", 1)
         
-        logger.info(f"Initialized NewsAPI Scraper")
+        logger.info("Initialized NewsAPI Scraper")
     
     def fetch_top_headlines(self, 
                            sources: List[str] = None,
@@ -121,7 +121,7 @@ class NewsAPIScraper:
             # Fetch articles with timeout and error handling
             try:
                 response = self.newsapi.get_top_headlines(**params)
-            except newsapi.newsapi_exception.NewsAPIException as api_error:
+            except Exception as api_error:
                 logger.error(f"NewsAPI error: {api_error}")
                 return articles
             except Exception as request_error:
@@ -208,7 +208,7 @@ class NewsAPIScraper:
             # Check if date range exceeds free tier limit (1 month)
             max_lookback = datetime.now() - timedelta(days=30)
             if from_date < max_lookback:
-                logger.warning(f"NewsAPI free tier only allows searches up to 1 month old. Adjusting from_date.")
+                logger.warning("NewsAPI free tier only allows searches up to 1 month old. Adjusting from_date.")
                 from_date = max_lookback
             
             logger.info(f"Searching for '{query}' from {from_date.date()} to {to_date.date()}")
@@ -232,7 +232,7 @@ class NewsAPIScraper:
             # Fetch articles with error handling
             try:
                 response = self.newsapi.get_everything(**params)
-            except newsapi.newsapi_exception.NewsAPIException as api_error:
+            except Exception as api_error:
                 logger.error(f"NewsAPI error: {api_error}")
                 return articles
             except Exception as request_error:
@@ -336,7 +336,7 @@ def main():
     
     if articles:
         logger.info(f"Fetched {len(articles)} articles")
-        logger.info(f"\nSample article:")
+        logger.info("\nSample article:")
         logger.info(f"Title: {articles[0]['title']}")
         logger.info(f"Source: {articles[0]['source']}")
         logger.info(f"Published: {articles[0]['published']}")
