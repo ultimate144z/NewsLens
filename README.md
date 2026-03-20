@@ -3,7 +3,7 @@
 <div align="center">
 
 [![CI](https://github.com/ultimate144z/NewsLens/actions/workflows/ci.yml/badge.svg)](https://github.com/ultimate144z/NewsLens/actions/workflows/ci.yml)
-[![Python](https://img.shields.io/badge/Python-3.9+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB.svg?logo=python&logoColor=white)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch&logoColor=white)](https://pytorch.org/)
 [![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-FFD21E.svg)](https://huggingface.co/transformers/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Dashboard-FF4B4B.svg?logo=streamlit&logoColor=white)](https://streamlit.io)
@@ -71,7 +71,7 @@ NewsLens is a **sentiment analysis and media bias detection system** that:
 git clone https://github.com/ultimate144z/NewsLens.git
 cd NewsLens
 
-# 2. Install (Python 3.9+)
+# 2. Install (Python 3.11+)
 make install          # pip install + spaCy model + NLTK data
 
 # 3. (Optional) add NewsAPI key
@@ -99,7 +99,7 @@ docker-compose run --rm pipeline     # full pipeline
 
 | Requirement | Minimum | Recommended |
 |-------------|---------|-------------|
-| Python | 3.9 | 3.11 |
+| Python | 3.11 | 3.12 |
 | RAM | 4 GB | 8 GB |
 | Disk | 2 GB | 4 GB |
 | NewsAPI key | optional | free tier |
